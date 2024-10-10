@@ -1,22 +1,51 @@
+ .card-container {
+            display: flex;
+            justify-content: space-between: 30px; /* Расстояние между карточками */
+            flex-wrap: wrap; /* Перенос карточек на следующий ряд, если они не помещаются */
+            gap: 20px; /* Отступы между карточками */
+        }
+
 .card {
-    width: 400px;
-   height: 550px;
-   background-color: SandyBrown;
-   border-radius: 60px;
+   width: 400px;
+   height: 600px;
+   background-color: Red;
+   border-radius: 30px;
+   overflow: hidden; /* обрезать содержимое, выходящее за рамки */
+   position: relative;
+   box-sizing: border-box;
+   transition: 1s;
 }
 
+.card:hover {
+    background-color: DarkRed;
+    width: 550px;
+    height: 700px;
+    transition: 1s;
+}
+
+
 .photo {
-    height: 40%;
+    height: 70%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* установить изображение по размеру контейнера */
+    border-radius: 30px;
 }
 
 .info {
-    height: 40%;
+    height: 20%;
+    margin: 10px;
 }
 
 h1::before{
     content: '#1';
-    color: OrangeRed
-    font-size: 50px;
+    color: OrangeRed;
+    font-size: 40px;
     border-radius: 10px;
     background-color: bisque;
 }
